@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | KFC</title>
+
+    <link rel="icon" href="../icon2.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/kfc.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script src="../Js/kfc.js"></script>  -->
+</head>
+<body>
+   <div class="grid">
+    <header>
+        <img class="logo" src="../kfc.png" alt="">
+    </header>
+
+
+    <div class="order">
+
+        <!-- <h2>Your order from KFC</h2> -->
+        <div class="a">
+            <h2 class="line">
+                <span class="line-text">Your order from KFC</span> 
+            </h2>
+        </div>
+        <ul id="orders">
+
+            <li class="order-item">
+                <div class="order-item-content">
+                    <div class="name">Chicken </div>
+
+                <div class="quantity">
+                    <button>-</button>
+                    <input type="number" value="1">
+                    <button>+</button>
+                </div>
+
+                <div class="price">
+                    <span>$3.99</span>
+                    <button>x</button>
+                </div>
+                </div>
+            </li>
+
+            <li class="order-item">
+                <div class="order-item-content">
+                    <div class="name">Chicken2 </div>
+
+                <div class="quantity">
+                    <button>-</button>
+                    <input type="number" value="1">
+                    <button>+</button>
+                </div>
+
+                <div class="price">
+                    <span>$1.99</span>
+                    <button>x</button>
+                </div>
+                </div>
+            </li>
+
+            <li class="order-item">
+                <div class="order-item-content">
+                    <div class="name">Chicken3 </div>
+
+                <div class="quantity">
+                    <button>-</button>
+                    <input type="number" value="1">
+                    <button>+</button>
+                </div>
+
+                <div class="price">
+                    <span>$4.99</span>
+                    <button><i class="far fa-times-circle"></i></button>
+                </div>
+                </div>
+            </li>
+           
+        </ul>
+
+        <button id="btn-addfood">Add a breverage</button>   
+
+        <div class="order-summary">
+            <p>Subtotal<span id="sub-total" class="money">$0.99999</span></p>
+            <p>Shipping fee<span id="ship" class="money">$2</span></p>
+            <p>Total( VAT 10% )<span id="total" class="money">$8.9999999</span></p>
+        </div>
+        <button class="btn-checkout" id="btn-check">Check out</button>
+    </div>
+    
+   </div>
+
+
+    <script src="../Js/kfc.js"></script> 
+
+    
+</body>
+</html>

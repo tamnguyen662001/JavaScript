@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+
+    <link rel="stylesheet" href="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/assets/owl.carousel.css">
+
+    <link rel="icon" href="./Image/img/favicon.png">
+    <link rel="stylesheet" href="./main.css">
+
+
+    <title>Speedcubers | Bootstrap</title>
+</head>
+
+<body data-spy="scroll" data-target="#main" data-offset="72" onload="realtimeClock(),showSuccessToast()">
+
+    <div class="preload"><span></span></div>
+    <div id="scroll"></div>
+    <div id="progress"></div>
+    <div id="toast"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid p-0">
+            <a href="#home" class="navbar-brand mx-3"><img src="./Image/img/logo1.png" alt="" id="logo" onclick="a()">
+            </a>
+
+            <button class="navbar-toggler collapsed btnn" data-target="#main" data-toggle="collapse" type="button">
+                <!-- <i class="fas fa-bars"></i> -->
+            </button>
+            <div id="main" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a href="#features" class="nav-link">features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#method" class="nav-link">CFOP method</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#tutorials" class="nav-link">Tutorials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#algorithms" class="nav-link">Algorithms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#advanced" class="nav-link">Advanced </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link ">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- End Navbar -->
+
+
+
+    <!-- Home section -->
+    <section class="home d-flex align-items-center" id="home">
+        <div class="container-fluid">
+            <div class="row my-5 mx-3">
+                <div class="col-md-7 mb-4">
+                    <div class="home-text mt-3">
+                        <h2>App Cube <span>Station</span></h2>
+                        <p>The GAN356 i is the newest 3x3 smart cube, using Bluetooth to
+                            pair with an Android or Apple device </p><br>
+                        <p>It provides full motion tracking and stats on each solve such
+                            as turns per second, rotations, and move count</p><br>
+                        <p>Professional speed cubers have been using our Cubicle Premium puzzles
+                            and speed cubes for years, earning numerous victories at World Championships,
+                            US Nationals, European Championships, and Asian Championships. </p> <br>
+                        <p>Our confidence
+                            in our build quality and our puzzles' performance make it clear why we call
+                            Cubicle Premium "The Best Cubes on Earth."</p>
+                        <div class="home-btn">
+                            <a href="https://cubestation.com/" class="btn btn-1 ">Download App</a>
+                            <div class="btn btn-1 btn-playvideo "><i class="fas fa-play"></i></div>
+
+                        </div>
+                    </div>
+                    <div class="row my-2 mx-3 justify-content-center align-items-center">
+                        <h2 id="clock"></h2>
+                    </div>
+                </div>
+
+                <div class="col-md-5 text-center my-4">
+                    <img src="./Image/img/gan2.png" class="home-topcircle" alt="">
+                    <div class="home-img">
+                        <div class="circle"></div>
+                        <img src="./Image/img/cube11.jpg" alt="">
+                    </div>
+                    <div class="search-box ">
+                        <input type="text" class="search-text" placeholder="Enter to search">
+                        <a href="" class="search-btn nav-link btn-1"> <i class="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Home section -->
+
+
+
+
+    <!-- Section features -->
+    <section class="features section-padding " id="features">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="section-title">
+                        <h2>awesome <span>features</span> </h2>
+                    </div>
+                </div>
+                <div class="owl-carousel features-carousel container ">
+                    <div class="features-item">
+                        <div class="icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3> New experience</h3>
+                        <p>Intelligent capture dynamic state on screen
+                            New gameplay of speedcubing
+                        </p>
+                    </div>
+                    <div class="features-item">
+                        <div class="icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h3>Global battle </h3>
+                        <p>Match global cubers To battle anywhere
+                        </p>
+                    </div>
+                    <div class="features-item">
+                        <div class="icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3>Big data training</h3>
+                        <p>Build a private full-dimension database
+                            Targeted skills improvement
+                        </p>
+                    </div>
+                    <div class="features-item">
+                        <div class="icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h3>Friends Battle</h3>
+                        <p>Invite friends to battle
+                            More practice Quicker improvement
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End section features -->
+
+
+
+
+
+
+
+    <!-- Fun fact -->
+    <section class="fun-fact section-padding " id="method">
+        <div class="container">
+            <div class="row mx-2">
+
+                <div class="col-md-8  order-md-2">
+                    <div class="section-title">
+                        <h2>CFOP Speedsolving <span>Method </span> </h2>
+                        <p class="lead"> <strong> Cross , First 2 Layers, Orientation, Permutation (CFOP) </strong>
+                            is the most popular method for speedsolving the Rubik's Cube.
+                        </p>
+                        <p class="lead">It is the method used by all 3x3 world record holders in the last decade.</p>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="fun-fact-item style">
+                                    <h3>00</h3>
+                                    <span>Cross</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="fun-fact-item style">
+                                    <h3>41</h3>
+                                    <span>F2L</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="fun-fact-item style">
+                                    <h3>56</h3>
+                                    <span>OLL</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="fun-fact-item style">
+                                    <h3>21</h3>
+                                    <span>PLL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4  order-md-1 my-3 justify-content-center d-flex
+                align-items-center">
+                    <img src="./Image/img/cube1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Fun fact -->
+
+
+    <figure>
+        <div class="fixed-wrap">
+            <div id="fixed">
+            </div>
+        </div>
+    </figure>
+
+    <!-- tutorials -->
+    <section class="how section-padding" id="tutorials">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>How To Solve The 3x3 <span>Rubik's Cube</span> </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="how-item line-right">
+                        <div class="step">1</div>
+                        <h3> Cross </h3>
+                        <p class='lead'>You should have already learned about the cross in the Beginner Method,
+                            including: solving the cross on the bottom, ignoring the centers,
+                            and dealing with specific cases.With the right practice, the cross can easily be done in
+                            less than 5 seconds.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="how-item line-right">
+                        <div class="step">2</div>
+                        <h3> First two layers </h3>
+                        <p class='lead'>Instead of solving layer by layer, you can solve 2 layers at the same time.
+                            F2L is much faster than the beginner method. Intuitive F2L means algorithms aren't required,
+                            and the process
+                            should make sense, around 20 moves per solve by F2L.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="how-item line-right">
+                        <div class="step">3</div>
+                        <h3> Orient last layer </h3>
+                        <p class='lead'>You'll need to learn all the 57 algorithms below to complete this in one step.
+                            If this seems too manyI recommend you learn the 2look OLL which uses only 9 algorithms
+                            but of course it's slower
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="how-item ">
+                        <div class="step">4</div>
+                        <h3> Permutate the last layer </h3>
+                        <p class='lead'>The final step of the CFOP method is the PLL.
+                            At this point the white cross, the first two layers are both done and the last layers pieces
+                            are oriented.When we execute this last step our Cube will be solved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End it work -->
+
+
+    <!-- App screen  -->
+    <section class="appscreen section-padding " id="algorithms">
+            <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="section-title">
+                        <h2> Algo<span>rithms</span> </h2>
+                    </div>
+                </div>
+                <div class="owl-carousel app-carousel container">
+                    <div class="app-item">
+                        <a href="https://jperm.net/"><img src="./Image/img/cll.png" alt=""></a>
+                    </div>
+                    <div class="app-item">
+                        <a href=""><img src="./Image/img/cp.png" alt=""></a>
+                    </div>
+                    <div class="app-item">
+                        <a href="https://jperm.net/algs/oll"> <img src="./Image/img/oll.png" alt=""></a>
+                    </div>
+                    <div class="app-item">
+                        <a href=""><img src="./Image/img/wr.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End App screen -->
+
+
+
+
+    <!--  Download  -->
+    <section class="section-padding download" id="advanced">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>Advanced <span>skill</span> </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4 ">
+                    <div class="download-item mb-3">
+                        <i class="fas fa-cube"></i>
+                        <h3> Winter Variation </h3>
+                        <p class='lead'>If the top cross is solved,
+                            Winter Variation inserts the last pair while solving OLL.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 ">
+                    <div class="download-item mb-3">
+                        <i class="fas fa-edit"></i>
+                        <h3>F2L Algorithms</h3>
+                        <p class='lead'>Make sure you're learning intuitive F2L
+                            to know how F2L works logically.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 ">
+                    <div class="download-item mb-3">
+                        <i class="fas fa-bolt"></i>
+                        <h3> Finger Tricks </h3>
+                        <p class='lead'>You need
+                            to do turns quickly, don't waste time changing your grip</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End download -->
+
+
+    <!-- News -->
+    <section class="section-padding news" id="news">
+        <div class="container">
+            <div class="row text-center justify-content-center">
+                <div class="line-text section-title">
+                    <div class="line">
+                        <span class="text">
+                            <h2>What is <span>Speedcubing?</span> </h2>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center ">
+                <div class="col-md-4 justify-content-center text-center">
+                    <p class="lead">Speedcubing is the fastest solving of the
+                        Rubik’s Cube that you’ll ever see! Speedcubers can solve the
+                        Rubik’s Cube in lightning speed. </p>
+                </div>
+                <div class="col-md-4 justify-content-center text-center">
+                    <p class="lead">The World Cube Association
+                        (WCA)Rubik’s Cube World Championships are held every two years with thousands
+                        of competitors traveling to race from all over the globe</p>
+                </div>
+                <div class="col-md-4 justify-content-center text-center">
+                    <p class="lead">The current record held for the fastest solve of the Rubik’s Cube
+                        is currently 3.47 seconds by Yusheng Du, who beat the record of Feliks Zemdegs by 0.75 seconds.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-item news-item-1">
+                        <div class="overlay">
+                            <div class="card2">
+                                <div class="content2">
+                                    <h2>Seung Hyuk Nahm</h2>
+                                    <ul class="news-icon d-flex">
+                                        <li><i class="fab fa-facebook-f"></i></li>
+                                        <li><i class="fab fa-twitter"></i></li>
+                                        <li><i class="fab fa-instagram"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-item news-item-2">
+                        <div class="overlay">
+                            <div class="card2">
+                                <div class="content2">
+                                    <h2>Bill Wang</h2>
+                                    <ul class="news-icon d-flex">
+                                        <li><i class="fab fa-facebook-f"></i></li>
+                                        <li><i class="fab fa-twitter"></i></li>
+                                        <li><i class="fab fa-instagram"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 justify-content-center">
+                    <div class="news-item news-item-3">
+                        <div class="overlay">
+                            <div class="card2">
+                                <div class="content2">
+                                    <h2>YuSheng Du</h2>
+                                    <ul class="news-icon d-flex">
+                                        <li><i class="fab fa-facebook-f"></i></li>
+                                        <li><i class="fab fa-twitter"></i></li>
+                                        <li><i class="fab fa-instagram"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End news -->
+
+    <!-- FAQ section -->
+    <section class="section-padding faq justify-content-center">
+        <div class="container">
+            <div class="row text-center justify-content-center">
+                <div class="section-title">
+                    <h2>Other <span>Tutorials</span> </h2>
+                </div>
+            </div>
+            <div class="row justifcontent-center">
+                <div class="col-md-12">
+                    <div id="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" data-toggle="collapse" data-target="#x">
+                                <h3>Rubik's Cube Finger Tricks</h3>
+                            </div>
+                            <div class="collapse show" id="x" data-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>Knowing more finger tricks can help you turn more smoothly and quickly.
+                                        The earlier finger tricks show how you should turn most of the time,
+                                        and later in the video there are more ways to do moves faster or without
+                                        regrips.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed" data-toggle="collapse" data-target="#x2">
+                                <h3>How To Solve a Rubik's Cube Blindfolded</h3>
+                            </div>
+                            <div class="collapse" id="x2" data-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>Solving a cube blindfolded sounds impossible at first, but I guarantee
+                                        you anybody is capable of it. You only need to know 3 algorithms,
+                                        and memorize around 20 letters each solve..</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed" data-toggle="collapse" data-target="#x3">
+                                <h3>Getting Faster at One Handed Solving</h3>
+                            </div>
+                            <div class="collapse " id="x3" data-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>Most of one handed solving is the same as 2 handed solving,
+                                        but these factors can still make a huge difference..</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed" data-toggle="collapse" data-target="#x4">
+                                <h3>Winter Variation</h3>
+                            </div>
+                            <div class="collapse " id="x4" data-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>If the top cross is solved, Winter Variation inserts the last pair while solving
+                                        OLL.
+                                        This only works if the pair can be inserted with R U' R'.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End FAQ -->
+
+
+    <!-- Contact us -->
+    <section class="section-padding contact justify-content-center align-items-center" id="contact">
+        <div class="container">
+            <div class="row text-center justify-content-center">
+                <div class="section-title">
+                    <h2>Contact <span>us</span> </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="contact-info justify-content-center align-items-center">
+                        <h3>For Any Question and Support</h3>
+                        <div class="contact-info-item">
+                            <i class="fas fa-cube"></i>
+                            <h4>The Cubicle</h4>
+                            <p>https://www.thecubicle.com/</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="far fa-calendar-check"></i>
+                            <h4>The WebShala</h4>
+                            <p>https://www.youtube.com/watch?v=an0_u96ac8A&t=10145s</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-edit"></i>
+                            <h4>Tutorial Online</h4>
+                            <p>https://www.youtube.com/watch?v=uQQtOWd0g9s</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="" class="form-control" placeholder="Enter your name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="" class="form-control"
+                                            placeholder="Enter your phone number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter your mail" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Subject" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea placeholder="Enter your message" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn btn-1 float-right">Send message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- End contact -->
+    <div class="to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <section class="container">
+            <div class="row justify-content-center ">
+
+                <div class="col-md-4 ">
+                    <div class="footer-header">
+                        <h3 class="ml-lg-3">Address</h3>
+                        <div class="footer-info justify-content-center align-items-center">
+                            <div class="footer-info-item">
+                                <i class="fas fa-location-arrow"></i>
+                                <h4>Nha Trang University</h4>
+                                <p>02 Nguyen Dinh Chieu</p>
+                            </div>
+                            <div class="footer-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <h4>Gmail</h4>
+                                <p>tam.nlt.61cntt@ntu.edu.vn</p>
+                            </div>
+                            <div class="footer-info-item">
+                                <i class="fas fa-phone"></i>
+                                <h4>Phone</h4>
+                                <p>038 684 3039</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="footer-header">
+                        <h3>About us</h3>
+                        <p>Speed Cubing, which is the competitive sport
+                            of solving a Rubik's Cube in mere seconds, has
+                            grown into a worldwide phenomenon in recent years.
+                        </p>
+                        <p>With constant practice and learning, anyone can improve
+                            their completion time.</p>
+                        <div class="footer-social d-flex">
+                            <ul class="d-flex">
+                                <li><i class="fab fa-facebook"></i></li>
+                                <li><i class="fab fa-github"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                                <li><i class="fab fa-youtube"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-header">
+                        <h3>Quick links</h3>
+                        <ul class="">
+                            <li class="nav-item">
+                                <a href="#features" class="nav-link">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#method" class="nav-link">CFOP method</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#tutorials" class="nav-link">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#algorithms" class="nav-link">Algorithms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#advanced" class="nav-link">Advanced </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contact" class="nav-link ">Contact</a>
+                            </li>
+                            <button type="button" class="btn btn-1" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                Sign in
+                            </button>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="heading text-center">SIGN IN</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form class="form" id="form-1">
+                            <div class="spacer"></div>
+
+                            <div class="form-group">
+                                <label for="username" class="form-label">Username</label>
+                                <input id="username" name="username" type="text" placeholder="Enter username"
+                                    class="form-control">
+                                <small class="form-message"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input id="email" name="email" type="text" placeholder="ex: email@domain.com"
+                                    class="form-control">
+                                <small class="form-message"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input id="password" name="password" type="password" placeholder="Enter password"
+                                    class="form-control">
+                                <small class="form-message"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password2" class="form-label">Password confirm</label>
+                                <input id="password2" name="password2" placeholder="Enter password again"
+                                    type="password" class="form-control">
+                                <small class="form-message"></small>
+                            </div>
+                            <div class="justify-content-between">
+                                <button class="btn btn-1 " id="submit">Login Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="heading text-center">SIGN IN</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+
+                    <form class="form" id="form-1">
+                        <div class="spacer"></div>
+
+                        <div class="form-group">
+                            <label for="username" class="form-label">Username</label>
+                            <input id="username" name="username" type="text" placeholder="Enter username"
+                                class="form-control">
+                            <small class="form-message"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <input id="password" name="password" type="password" placeholder="Enter password"
+                                class="form-control">
+                            <small class="form-message"></small>
+                        </div>
+                        <div class="justify-content-between">
+                            <button class="btn btn-1 " id="submit">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <!-- End Modal -->
+    </div>
+
+    <!-- end -->
+
+    <!-- Star video popup -->
+    <div class="video-popup">
+        <div class="video-popup-inner">
+            <i class="fas fa-times video-popup-close"></i>
+            <div class="iframe-box">
+                <iframe id="box-1" src="https://www.youtube.com/embed/ez8x5JDLexU" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <!-- End video -->
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/owl.carousel.js"></script>
+
+</body>
+
+</html>
